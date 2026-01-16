@@ -52,6 +52,20 @@
             `<span class="credential">${cred}</span>`
         ).join('');
 
+        const actionsContainer = document.querySelector('.hero-actions');
+        if (actionsContainer) {
+            actionsContainer.innerHTML = `
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                
+                ${CONFIG.resume ? `
+                <a href="${CONFIG.resume}" target="_blank" rel="noopener" class="btn btn-outline">
+                    View Resume
+                </a>` : ''}
+
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            `;
+        }
+
         const socialContainer = document.getElementById('hero-social');
         const socialOrder = ['github', 'linkedin', 'instagram', 'email'];
         const links = [];
