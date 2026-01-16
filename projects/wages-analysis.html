@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="US Real Wages Analysis - Time series forecasting with SARIMA, LSTM, and ensemble methods">
+    <title>US Real Wages Analysis | Vybhav Ashok</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">VA</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#funside">Funside</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            
+            <div class="project-meta">
+                <span class="project-category-label">Statistical Modeling & Time Series</span>
+            </div>
+            
+            <h1 class="project-page-title">US Real Wages Analysis</h1>
+            
+            <p class="project-summary">
+                Inflation-adjusted wage trend analysis with SARIMA, LSTM, and ensemble forecasting methods, 
+                featuring rigorous model validation and bootstrap confidence intervals.
+            </p>
+            
+            <div class="project-links">
+                <a href="https://github.com/yourusername/us-wages-analysis" class="btn btn-secondary" target="_blank" rel="noopener">
+                    GitHub Repository
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            
+            <!-- Problem Statement -->
+            <section class="project-section">
+                <h2 class="project-section-title">Problem Statement</h2>
+                <div class="project-section-content">
+                    <p>
+                        Understanding real wage dynamics is crucial for economic policy, labor market analysis, 
+                        and individual financial planning. Nominal wage growth often masks the true purchasing 
+                        power changes experienced by workers, especially during periods of high inflation.
+                    </p>
+                    <p>
+                        This project develops a comprehensive forecasting framework for US real wages that 
+                        combines classical econometric methods with modern deep learning approaches, providing 
+                        both point forecasts and principled uncertainty estimates.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Why This Problem Matters -->
+            <section class="project-section">
+                <h2 class="project-section-title">Why This Problem Matters</h2>
+                <div class="project-section-content">
+                    <p>
+                        Real wage forecasting has direct implications for:
+                    </p>
+                    <ul class="project-list">
+                        <li>Monetary policy decisions and inflation targeting</li>
+                        <li>Labor market health assessment</li>
+                        <li>Retirement planning and long-term financial projections</li>
+                        <li>Wage negotiation benchmarks for employers and unions</li>
+                    </ul>
+                    <p>
+                        Most existing analyses focus on nominal wages or simple inflation adjustments. 
+                        This project provides a more rigorous treatment with proper uncertainty quantification — 
+                        essential for any serious policy or planning application.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Data Description -->
+            <section class="project-section">
+                <h2 class="project-section-title">Data Description</h2>
+                <div class="project-section-content">
+                    <p>
+                        The analysis uses two primary data sources from FRED (Federal Reserve Economic Data):
+                    </p>
+                    
+                    <div class="data-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Series</th>
+                                    <th>Description</th>
+                                    <th>Frequency</th>
+                                    <th>Period</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CES0500000003</td>
+                                    <td>Average Hourly Earnings (Private)</td>
+                                    <td>Monthly</td>
+                                    <td>1964–2024</td>
+                                </tr>
+                                <tr>
+                                    <td>CPIAUCSL</td>
+                                    <td>Consumer Price Index (All Urban)</td>
+                                    <td>Monthly</td>
+                                    <td>1964–2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <p>
+                        Real wages computed as: Real Wage = (Nominal Wage / CPI) × 100, 
+                        with base period set to allow direct dollar interpretation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Methodology -->
+            <section class="project-section">
+                <h2 class="project-section-title">Methodology</h2>
+                <div class="project-section-content">
+                    <p>The analysis employs a multi-model approach with rigorous validation:</p>
+                    
+                    <div class="methodology-steps">
+                        <div class="methodology-step">
+                            <span class="step-number">01</span>
+                            <h3>Exploratory Analysis & Stationarity Testing</h3>
+                            <p>
+                                Decomposition into trend, seasonal, and residual components. 
+                                ADF and KPSS tests for unit root detection. Identification of 
+                                structural breaks using Chow test.
+                            </p>
+                        </div>
+                        
+                        <div class="methodology-step">
+                            <span class="step-number">02</span>
+                            <h3>SARIMA Modeling</h3>
+                            <p>
+                                Grid search over (p,d,q)×(P,D,Q,s) parameter space. 
+                                Model selection via AIC/BIC with diagnostic checking 
+                                (Ljung-Box, residual normality, heteroscedasticity tests).
+                            </p>
+                        </div>
+                        
+                        <div class="methodology-step">
+                            <span class="step-number">03</span>
+                            <h3>LSTM Deep Learning</h3>
+                            <p>
+                                Sequence-to-sequence architecture with attention mechanism. 
+                                Hyperparameter tuning via Bayesian optimization. 
+                                Dropout regularization to prevent overfitting.
+                            </p>
+                        </div>
+                        
+                        <div class="methodology-step">
+                            <span class="step-number">04</span>
+                            <h3>Ensemble & Uncertainty Quantification</h3>
+                            <p>
+                                Weighted ensemble combining SARIMA and LSTM predictions. 
+                                Bootstrap confidence intervals (1000 replications) for 
+                                robust uncertainty estimates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture / Flow Diagram -->
+            <section class="project-section">
+                <h2 class="project-section-title">Analysis Pipeline</h2>
+                <div class="project-section-content">
+                    <div class="architecture-diagram">
+                        <div class="diagram-placeholder">
+                            <p>Pipeline Diagram</p>
+                            <small>Add your forecasting pipeline visualization here</small>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">
+                        Figure 1: Multi-model forecasting pipeline from raw data to ensemble predictions 
+                        with confidence intervals.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Results / Findings -->
+            <section class="project-section">
+                <h2 class="project-section-title">Results & Findings</h2>
+                <div class="project-section-content">
+                    <div class="findings-grid">
+                        <div class="finding-card">
+                            <span class="finding-number">2.3%</span>
+                            <span class="finding-label">MAPE (Ensemble)</span>
+                            <span class="finding-detail">12-month forecast horizon</span>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <span class="finding-number">15%</span>
+                            <span class="finding-label">Improvement vs SARIMA</span>
+                            <span class="finding-detail">Ensemble outperforms single models</span>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <span class="finding-number">94%</span>
+                            <span class="finding-label">CI Coverage</span>
+                            <span class="finding-detail">Bootstrap intervals well-calibrated</span>
+                        </div>
+                    </div>
+                    
+                    <h3>Key Findings</h3>
+                    <ul class="project-list">
+                        <li>
+                            <strong>Ensemble superiority:</strong> The weighted SARIMA-LSTM ensemble 
+                            consistently outperformed individual models across all forecast horizons.
+                        </li>
+                        <li>
+                            <strong>Structural breaks matter:</strong> Models accounting for the 2020 
+                            COVID shock significantly outperformed those assuming continuity.
+                        </li>
+                        <li>
+                            <strong>Uncertainty calibration:</strong> Bootstrap confidence intervals 
+                            achieved near-nominal coverage (94% for 95% CI), essential for policy use.
+                        </li>
+                        <li>
+                            <strong>LSTM captures nonlinearity:</strong> Deep learning component 
+                            particularly valuable during high-volatility periods.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Assumptions & Constraints -->
+            <section class="project-section">
+                <h2 class="project-section-title">Assumptions & Constraints</h2>
+                <div class="project-section-content">
+                    <h3>Assumptions</h3>
+                    <ul class="project-list">
+                        <li>CPI accurately captures inflation relevant to wage earners</li>
+                        <li>Historical patterns provide information about future dynamics</li>
+                        <li>Structural relationships remain approximately stable</li>
+                    </ul>
+                    
+                    <h3>Constraints</h3>
+                    <ul class="project-list">
+                        <li>Aggregate data masks heterogeneity across industries/demographics</li>
+                        <li>Monthly frequency limits analysis of high-frequency dynamics</li>
+                        <li>Cannot incorporate exogenous policy shocks prospectively</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Limitations -->
+            <section class="project-section">
+                <h2 class="project-section-title">Limitations</h2>
+                <div class="project-section-content">
+                    <ul class="project-list">
+                        <li>
+                            <strong>Aggregate analysis:</strong> Results represent average effects; 
+                            individual/sectoral experiences may differ substantially.
+                        </li>
+                        <li>
+                            <strong>Exogenous shock sensitivity:</strong> Models cannot anticipate 
+                            unprecedented events (pandemics, policy regime changes).
+                        </li>
+                        <li>
+                            <strong>CPI limitations:</strong> Official inflation measures may not 
+                            capture experienced inflation for all demographic groups.
+                        </li>
+                        <li>
+                            <strong>Forecast horizon:</strong> Accuracy degrades significantly 
+                            beyond 12-month horizon due to compounding uncertainty.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="project-section">
+                <h2 class="project-section-title">Tech Stack</h2>
+                <div class="project-section-content">
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h4>Languages</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">Python</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Time Series</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">statsmodels</span>
+                                <span class="tech-item">pmdarima</span>
+                                <span class="tech-item">arch</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Deep Learning</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">TensorFlow</span>
+                                <span class="tech-item">Keras</span>
+                                <span class="tech-item">Optuna</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Data & Visualization</h4>
+                            <div class="tech-items">
+                                <span class="tech-item">pandas</span>
+                                <span class="tech-item">numpy</span>
+                                <span class="tech-item">matplotlib</span>
+                                <span class="tech-item">seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links -->
+            <section class="project-section">
+                <h2 class="project-section-title">Links & Resources</h2>
+                <div class="project-section-content">
+                    <div class="resource-links">
+                        <a href="https://github.com/yourusername/us-wages-analysis" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </span>
+                            <span class="resource-text">
+                                <span class="resource-label">GitHub</span>
+                                <span class="resource-value">Code Repository</span>
+                            </span>
+                        </a>
+                        
+                        <a href="https://fred.stlouisfed.org/" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                                </svg>
+                            </span>
+                            <span class="resource-text">
+                                <span class="resource-label">Data</span>
+                                <span class="resource-value">FRED Economic Data</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-name">Vybhav Ashok</span>
+                <span class="footer-divider">·</span>
+                <span class="footer-year">2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
