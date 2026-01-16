@@ -8,11 +8,11 @@ const CONFIG = {
     name: "Vybhav Chaturvedi",
     title: "Machine Learning Engineer || Data Scientist",
     subtitle: "Applied Research & Decision Systems",
-    
+
     credentials: [
         "Data Science @ ISI Kolkata · IIT Kharagpur · IIM Calcutta",
         "Ex–ZS Associates",
-        "Computer Science Engineer @ Thapar University"
+            "Computer Science Engineer @ Thapar University"
     ],
 
     tagline: "Working at the intersection of statistical rigor, real-world data complexity, and production-aware ML systems.",
@@ -183,7 +183,7 @@ const CONFIG = {
             title: "Welcome to my First Blog",
             platform: "TDS",
             url: "https://medium.com/@vybhav/welcome-to-my-first-blog-208a97eac694",
-            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg    ",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg",
             date: "2021"
         }
     ],

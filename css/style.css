@@ -574,6 +574,8 @@ body {
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-text-light);
+    display: block;
+    line-height: 1.5;
 }
 
 /* ============================================
@@ -911,43 +913,53 @@ body {
     gap: var(--space-md);
     padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border-light);
+    margin-top: var(--space-lg);
 }
 
 .blog-profiles > span {
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--color-text-light-secondary);
+    margin-right: var(--space-xs);
 }
 
 .profile-btn {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-md);
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    padding: 0.6rem 1rem; /* Slightly larger touch target */
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
     text-decoration: none;
     transition: all var(--transition-fast);
+    line-height: 1;
 }
 
 .profile-btn.devto {
-    background: #0a0a0a;
+    background: #1e293b;
     color: white;
+    border: 1px solid #0f172a;
 }
 
 .profile-btn.medium {
-    background: #000;
+    background: #1e293b;
     color: white;
+    border: 1px solid #1e293b;
 }
 
 .profile-btn:hover {
-    opacity: 0.85;
-    transform: translateY(-1px);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .profile-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.9;
 }
 
 /* ============================================
@@ -1192,11 +1204,11 @@ body {
 
 .contact-label {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-text-dark-secondary);
-    margin-bottom: 2px;
+    color: var(--color-text-dark);
+    margin-top: 4px;
 }
 
 .contact-value {

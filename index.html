@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vybhav Chaturvedi - Machine Learning Engineer & Data Scientist">
-    <title>Vybhav Chaturvedi | ML Engineer & Data Scientist</title>
-    
-    <!-- Fonts -->
+    <meta name="description" content="Portfolio">
+    <title id="page-title">Loading...</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
             <a href="#home" class="nav-logo">VC</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about">About</a></li>
@@ -36,386 +31,127 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
             <div class="hero-pattern"></div>
         </div>
-        
+
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-greeting">Hi, I'm</p>
-                    <h1 class="hero-name">Vybhav Chaturvedi</h1>
-                    <h2 class="hero-title">Machine Learning Engineer & Data Scientist</h2>
-                    <p class="hero-subtitle">Applied Research & Decision Systems</p>
-                    
-                    <div class="hero-credentials">
-                        <span class="credential">PGDBA (ISI Kolkata · IIT Kharagpur · IIM Calcutta)</span>
-                        <span class="credential">Ex–ZS Associates</span>
-                    </div>
-                    
-                    <p class="hero-tagline">
-                        Working at the intersection of statistical rigor, real-world data complexity, and production-aware ML systems.
-                    </p>
-                    
+                    <h1 class="hero-name" id="hero-name"></h1>
+                    <h2 class="hero-title" id="hero-title"></h2>
+                    <p class="hero-subtitle" id="hero-subtitle"></p>
+
+                    <div class="hero-credentials" id="hero-credentials"></div>
+                    <p class="hero-tagline" id="hero-tagline"></p>
+
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-outline">Get in Touch</a>
                     </div>
-                    
-                    <div class="hero-social">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                        <a href="mailto:your.email@example.com" aria-label="Email">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                        </a>
-                    </div>
+
+                    <div class="hero-social" id="hero-social"></div>
                 </div>
-                
+
                 <div class="hero-image">
                     <div class="image-carousel" id="headshot-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-slide active">
-                                <div class="headshot-placeholder">
-                                    <span>Your Photo</span>
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <div class="headshot-placeholder">
-                                    <span>Photo 2</span>
-                                </div>
-                            </div>
-                            <div class="carousel-slide">
-                                <div class="headshot-placeholder">
-                                    <span>Photo 3</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-dots">
-                            <button class="dot active" data-slide="0"></button>
-                            <button class="dot" data-slide="1"></button>
-                            <button class="dot" data-slide="2"></button>
-                        </div>
+                        <div class="carousel-track" id="carousel-track"></div>
+                        <div class="carousel-dots" id="carousel-dots"></div>
                     </div>
                     <div class="image-decoration"></div>
                 </div>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <span>Scroll</span>
             <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span>
-                About Me
-            </h2>
-            
+            <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p class="about-lead">
-                        I build machine learning systems that work in production — not just in notebooks.
-                    </p>
-                    <p>
-                        My work spans computational biology, time series forecasting, and anomaly detection, 
-                        always grounded in statistical rigor and interpretability. I'm drawn to problems 
-                        where the data is messy, the signal is weak, and the stakes are real.
-                    </p>
-                </div>
-                
+                <div class="about-text" id="about-text"></div>
                 <div class="about-details">
                     <div class="about-philosophy">
                         <h3>How I Think</h3>
-                        <ul>
-                            <li>Accuracy over speed</li>
-                            <li>Interpretability over opacity</li>
-                            <li>Validation over blind deployment</li>
-                            <li>Systems over isolated models</li>
-                            <li>Uncertainty quantification is not optional</li>
-                        </ul>
+                        <ul id="about-philosophy"></ul>
                     </div>
-                    
                     <div class="about-snapshot">
                         <h3>Quick Facts</h3>
-                        <div class="snapshot-grid">
-                            <div class="snapshot-item">
-                                <span class="snapshot-label">Education</span>
-                                <span class="snapshot-value">PGDBA (ISI–IIT–IIM)</span>
-                            </div>
-                            <div class="snapshot-item">
-                                <span class="snapshot-label">Experience</span>
-                                <span class="snapshot-value">3.5+ years ML/Analytics</span>
-                            </div>
-                            <div class="snapshot-item">
-                                <span class="snapshot-label">Domains</span>
-                                <span class="snapshot-value">Healthcare · Enterprise · Research</span>
-                            </div>
-                        </div>
+                        <div class="snapshot-grid" id="about-snapshot"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="section section-dark" id="projects">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span>
-                Projects
-            </h2>
-            
-            <div class="projects-grid" id="projects-grid">
-                <!-- Projects rendered by JS -->
-            </div>
+            <h2 class="section-title"><span class="title-number">02.</span> Projects</h2>
+            <div class="projects-grid" id="projects-grid"></div>
         </div>
     </section>
 
-    <!-- Research Section -->
     <section class="section" id="research">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span>
-                Research & Writing
-            </h2>
-            
-            <!-- Publications -->
+            <h2 class="section-title"><span class="title-number">03.</span> Research & Writing</h2>
+
             <div class="research-subsection">
                 <h3 class="subsection-title">Publications</h3>
-                <div class="publications-grid">
-                    <div class="publication-card">
-                        <span class="pub-status published">Published</span>
-                        <h4>Machine Learning Model for Mapping of Music Mood and Human Emotion Based on Physiological Signals</h4>
-                        <p>Study correlating human emotions and music mood using physiological signals. 35 music moods mapped to 8 emotions using bio-signals with 81.4% accuracy.</p>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Multimedia Tools and Applications, Springer · 2021</span>
-                            <a href="https://doi.org/10.1007/s11042-021-11650-0" target="_blank" rel="noopener" class="pub-link">View Paper →</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-card">
-                        <span class="pub-status published">Published</span>
-                        <h4>A Detailed Review of Music Mood and Human Emotion Recognition based on Biosignals</h4>
-                        <p>Comprehensive review of emotion detection systems, music mood analysis, and physiological feature extraction methods.</p>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Multimedia Systems, Springer · 2021</span>
-                            <a href="https://doi.org/10.1007/s00530-021-00786-6" target="_blank" rel="noopener" class="pub-link">View Paper →</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="publications-grid" id="publications-grid"></div>
             </div>
 
-            <!-- Patent -->
-            <div class="research-subsection">
-                <h3 class="subsection-title">Patent</h3>
-                <div class="patent-card">
-                    <div class="patent-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        <span>Australian Patent 2021101097</span>
-                    </div>
-                    <h4>A System And Method For Automatic Playlist Generation By Analysing Human Emotions Through Physiological Signals</h4>
-                    <p>Innovative approach for emotion-driven playlist generation using brain waves, cardiac potential, and muscle signals.</p>
-                    <span class="patent-status">Granted · Expires March 2029</span>
-                </div>
-            </div>
+            <div class="research-subsection" id="patents-section"></div>
 
-            <!-- Technical Writing -->
             <div class="research-subsection">
                 <h3 class="subsection-title">Technical Writing</h3>
-                <div class="blog-posts-grid" id="blog-posts-grid">
-                    <!-- Rendered by JS from config.blogPosts -->
-                </div>
-                <div class="blog-profiles">
-                    <span>View all on:</span>
-                    <a href="https://dev.to/vybhav" target="_blank" rel="noopener" class="profile-btn devto">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 3.98.01.01h.56c.37 0 .66-.07.84-.23.21-.19.31-.51.31-.96v-1.58c0-.45-.1-.77-.31-.95l-.01-.04zm13.58-6.87c-.11-.8-.74-1.43-1.54-1.54L16.04 1h-.01C14.75.81 12 .56 12 .56s-2.75.25-4.03.44L4.53 1.64c-.81.12-1.43.76-1.54 1.56l-.01.01L2.5 6.4a44.86 44.86 0 000 11.18l.49 3.2c.11.79.73 1.43 1.54 1.54l3.43.5h.01c1.28.19 4.03.44 4.03.44s2.75-.25 4.03-.44l3.44-.5c.8-.11 1.43-.75 1.54-1.54l.48-3.19c.24-1.86.37-3.74.37-5.6 0-1.85-.12-3.73-.37-5.6l-.49-3.2z"/></svg>
-                        DEV.to
-                    </a>
-                    <a href="https://medium.com/@yourusername" target="_blank" rel="noopener" class="profile-btn medium">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-                        Towards Data Science
-                    </a>
-                </div>
+                <div class="blog-posts-grid" id="blog-posts-grid"></div>
+                <div class="blog-profiles" id="blog-profiles"></div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section class="section section-dark" id="experience">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                Experience
-            </h2>
-
-            <div class="timeline-alt">
-                <div class="timeline-line"></div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">2024 — Present</span>
-                        <h3>Graduate Student — PGDBA</h3>
-                        <span class="timeline-org">ISI Kolkata · IIT Kharagpur · IIM Calcutta</span>
-                        <ul class="timeline-points">
-                            <li>Computational biology research on MDD biomarker discovery</li>
-                            <li>Advanced coursework in statistical learning and optimization</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Jan 2022 — Aug 2024</span>
-                        <h3>Associate Consultant</h3>
-                        <span class="timeline-org">ZS Associates</span>
-                        <ul class="timeline-points">
-                            <li>Led team of 4 associates for Go-to-Market & Product Management</li>
-                            <li>Built 'Case Study Finder' using Python & AWS (EC2, ElasticSearch, S3)</li>
-                            <li>Developed Python ETL pipelines boosting efficiency by 8-20%</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Apr 2022 — Jun 2022</span>
-                        <h3>ML Fellow</h3>
-                        <span class="timeline-org">Fellowship.ai - Launchpad</span>
-                        <ul class="timeline-points">
-                            <li>Music moderation ML system for piano performance analysis</li>
-                            <li>Achieved 94% accuracy for beat detection</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Jun 2021 — Aug 2021</span>
-                        <h3>Project Development Intern</h3>
-                        <span class="timeline-org">BookThatStudio - Comet Spaces</span>
-                        <ul class="timeline-points">
-                            <li>Designed website from scratch using ReactJS, NodeJS</li>
-                            <li>Integrated payment gateway and social media logins</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-period">Apr 2017 — Jul 2022</span>
-                        <h3>B.E. + MBA (Integrated)</h3>
-                        <span class="timeline-org">Thapar Institute of Engineering and Technology</span>
-                        <ul class="timeline-points">
-                            <li>Computer Engineering & Business Administration</li>
-                            <li>Focus: Computer Networks, ML, Business Development</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title"><span class="title-number">04.</span> Experience</h2>
+            <div class="timeline-alt" id="experience-timeline"></div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">05.</span>
-                Skills & Tools
-            </h2>
-
-            <div class="skills-container" id="skills-container">
-                <!-- Skills rendered by JS -->
-            </div>
+            <h2 class="section-title"><span class="title-number">05.</span> Skills & Tools</h2>
+            <div class="skills-container" id="skills-container"></div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section section-dark" id="contact">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">06.</span>
-                Get in Touch
-            </h2>
-
+            <h2 class="section-title"><span class="title-number">06.</span> Get in Touch</h2>
             <div class="contact-content">
-                <p class="contact-lead">
-                    Interested in collaborating on ML research, data science projects, or just want to chat?
-                    I'd love to hear from you.
-                </p>
-
-                <div class="contact-grid">
-                    <a href="mailto:your.email@example.com" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </div>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">your.email@example.com</span>
-                    </a>
-
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </div>
-                        <span class="contact-label">GitHub</span>
-                        <span class="contact-value">yourusername</span>
-                    </a>
-
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </div>
-                        <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">yourusername</span>
-                    </a>
-
-                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </div>
-                        <span class="contact-label">Instagram</span>
-                        <span class="contact-value">yourusername</span>
-                    </a>
-                </div>
+                <p class="contact-lead">Interested in collaborating on ML research or data science projects? I'd love to hear from you.</p>
+                <div class="contact-grid" id="contact-grid"></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
-                <span class="footer-name">Vybhav Chaturvedi</span>
-                <span class="footer-title">ML Engineer & Data Scientist</span>
+                <span class="footer-name" id="footer-name"></span>
+                <span class="footer-title" id="footer-title"></span>
             </div>
             <div class="footer-center">
-                <div class="footer-links">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://dev.to/yourusername" target="_blank" rel="noopener">DEV</a>
-                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a>
-                </div>
+                <div class="footer-links" id="footer-links"></div>
             </div>
             <div class="footer-right">
-                <span>© 2025</span>
+                <span id="footer-year"></span>
             </div>
         </div>
     </footer>
