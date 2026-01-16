@@ -124,7 +124,7 @@ body {
     letter-spacing: -0.03em;
     display: inline-flex;
     align-items: center;
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
 
 /* Color coding for the path symbols */
@@ -351,17 +351,24 @@ body {
     position: relative;
 }
 
+/* UNIVERSAL CAROUSEL FIX (Works on Desktop AND Mobile) */
 .image-carousel {
     position: relative;
     width: 100%;
-    aspect-ratio: 3/4;
+    /* Force 4:3 Aspect Ratio (Height = 133% of Width) */
+    padding-bottom: 133.33%;
+    height: 0;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
+    background: var(--color-surface-dark); /* Visible placeholder background */
 }
 
 .carousel-track {
-    position: relative;
+    /* Absolute position to fill the padded area */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -392,6 +399,9 @@ body {
     justify-content: center;
     color: var(--color-text-light-secondary);
     font-size: 1.1rem;
+    position: absolute; /* Added to ensure it sits behind image */
+    top: 0;
+    left: 0;
 }
 
 .carousel-dots {
@@ -401,6 +411,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: var(--space-sm);
+    z-index: 2; /* Ensure dots are above image */
 }
 
 .dot {
@@ -1207,7 +1218,7 @@ body {
 .contact-lead {
     font-size: 1.1rem;
     color: var(--color-text-dark-secondary);
-    margin-bottom: var(--space-1xl);
+    margin-bottom: var(--space-xl);
 }
 
 .contact-grid {
@@ -1366,20 +1377,54 @@ body {
    ============================================ */
 
 @media (max-width: 992px) {
+    /* 1. FORCE MOBILE LAYOUT */
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-xl);
     }
 
     .hero-text {
         max-width: 100%;
-        order: 2;
+        order: 2; /* Text below image */
     }
 
     .hero-image {
-        order: 1;
-        max-width: 300px;
+        order: 1; /* Image first */
+        max-width: 320px;
         margin: 0 auto;
+        width: 100%;
+    }
+
+    /* 2. FORCE CAROUSEL VISIBILITY */
+    .image-carousel {
+        position: relative;
+        width: 100%;
+        /* Force 4:3 Aspect Ratio (Height = 133% of Width) */
+        padding-bottom: 133.33%;
+        height: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+        background: var(--color-surface-dark);
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .carousel-track {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-track img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
     }
 
     .hero-actions,

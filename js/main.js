@@ -272,27 +272,30 @@
         menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('active')));
     }
 
-    function initCarousel() {
+function initCarousel() {
         const track = document.getElementById('carousel-track');
         const dotsContainer = document.getElementById('carousel-dots');
         if (!track || !CONFIG.headshots.length) return;
 
+        // Render Slides (SIMPLIFIED: No opacity hacks)
         track.innerHTML = CONFIG.headshots.map((src, i) => `
             <div class="carousel-slide ${i === 0 ? 'active' : ''}">
                 <div class="headshot-placeholder">
                     <span>${i === 0 ? 'Your Photo' : `Photo ${i+1}`}</span>
                 </div>
                 <img src="${src}" alt="Headshot ${i+1}" 
-                     style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 0.3s;"
-                     onload="this.style.opacity=1"
+                     loading="${i === 0 ? 'eager' : 'lazy'}"
+                     style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;"
                      onerror="this.style.display='none'">
             </div>
         `).join('');
 
+        // Render Dots
         dotsContainer.innerHTML = CONFIG.headshots.map((_, i) => `
             <button class="dot ${i === 0 ? 'active' : ''}" data-slide="${i}"></button>
         `).join('');
 
+        // Logic
         const slides = track.querySelectorAll('.carousel-slide');
         const dots = dotsContainer.querySelectorAll('.dot');
         let current = 0;
@@ -307,7 +310,7 @@
         };
 
         const next = () => update(current + 1);
-        const start = () => interval = setInterval(next, 4000);
+        const start = () => interval = setInterval(next, 5000);
         const stop = () => clearInterval(interval);
 
         dots.forEach((dot, i) => dot.addEventListener('click', () => { stop(); update(i); start(); }));
