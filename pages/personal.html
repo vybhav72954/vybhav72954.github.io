@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vybhav Chaturvedi - Personal side: Travel, Football, Poetry">
+    <title>Beyond Work | Vybhav Chaturvedi</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/personal.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">VC</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="personal-header">
+        <div class="container">
+            <h1>Beyond Work</h1>
+            <p>The stuff that doesn't fit on a résumé but makes life interesting.</p>
+        </div>
+    </header>
+
+    <!-- Travel Section -->
+    <section class="personal-section">
+        <div class="container">
+            <h2>
+                <span class="section-icon">✈️</span>
+                Travelling
+            </h2>
+            <p class="section-intro">
+                Some places I've been lucky enough to explore.
+            </p>
+            
+            <div class="photo-grid">
+                <div class="photo-placeholder">
+                    <span>Travel Photo 1</span>
+                </div>
+                <div class="photo-placeholder">
+                    <span>Travel Photo 2</span>
+                </div>
+                <div class="photo-placeholder">
+                    <span>Travel Photo 3</span>
+                </div>
+                <div class="photo-placeholder">
+                    <span>Travel Photo 4</span>
+                </div>
+                <div class="photo-placeholder">
+                    <span>Travel Photo 5</span>
+                </div>
+                <div class="photo-placeholder">
+                    <span>Travel Photo 6</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Football Section -->
+    <section class="personal-section section-alt">
+        <div class="container">
+            <h2>
+                <span class="section-icon">⚽</span>
+                Football
+            </h2>
+            <div class="football-content">
+                <p>
+                    Weekend footballer and lifelong fan. There's something about the game that mirrors 
+                    systems thinking — patterns emerging from chaos, the importance of positioning, 
+                    and how small margins define outcomes.
+                </p>
+                <p>
+                    Whether playing 5-a-side or watching the Premier League, football remains my 
+                    favorite way to disconnect from screens and remember that not everything 
+                    needs to be optimized.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poetry Section -->
+    <section class="personal-section">
+        <div class="container">
+            <h2>
+                <span class="section-icon">✍️</span>
+                Poetry
+            </h2>
+            <p class="section-intro">
+                Occasional attempts at putting thoughts into verse.
+            </p>
+            
+            <div class="poems-grid">
+                <article class="poem-card" data-poem="1">
+                    <h3>Poem Title One</h3>
+                    <p class="poem-preview">First line of the poem goes here...</p>
+                    <button class="poem-read-btn">Read →</button>
+                </article>
+                
+                <article class="poem-card" data-poem="2">
+                    <h3>Poem Title Two</h3>
+                    <p class="poem-preview">First line of the poem goes here...</p>
+                    <button class="poem-read-btn">Read →</button>
+                </article>
+                
+                <article class="poem-card" data-poem="3">
+                    <h3>Poem Title Three</h3>
+                    <p class="poem-preview">First line of the poem goes here...</p>
+                    <button class="poem-read-btn">Read →</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poem Modal -->
+    <div class="modal" id="poem-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3 class="modal-title" id="modal-title">Poem Title</h3>
+            <div class="modal-body" id="modal-body">
+                <!-- Poem content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-name">Vybhav Chaturvedi</span>
+            </div>
+            <div class="footer-center">
+                <a href="../index.html">← Back to Portfolio</a>
+            </div>
+            <div class="footer-right">
+                <span>© 2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Poem Modal
+        const poems = {
+            1: {
+                title: 'Poem Title One',
+                content: `Your poem content here.
+
+Line by line,
+verse by verse.
+
+Replace this placeholder.`
+            },
+            2: {
+                title: 'Poem Title Two',
+                content: `Another poem.
+
+Your words here.`
+            },
+            3: {
+                title: 'Poem Title Three',
+                content: `And a third.
+
+Keep writing.`
+            }
+        };
+
+        document.querySelectorAll('.poem-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.dataset.poem;
+                const poem = poems[id];
+                if (poem) {
+                    document.getElementById('modal-title').textContent = poem.title;
+                    document.getElementById('modal-body').textContent = poem.content;
+                    document.getElementById('poem-modal').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('poem-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'poem-modal') closeModal();
+        });
+
+        function closeModal() {
+            document.getElementById('poem-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

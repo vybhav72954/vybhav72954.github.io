@@ -1,118 +1,66 @@
-# Vybhav Ashok — Portfolio
+# Vybhav Chaturvedi — Portfolio
 
-Personal portfolio website showcasing ML/Data Science work, research, and projects.
+Personal portfolio showcasing ML/Data Science work.
 
-## 🚀 Deployment (GitHub Pages)
-
-### Option 1: Direct Push (Simplest)
-
-1. Create a new repository named `yourusername.github.io` on GitHub
-2. Push this code to the repository:
+## 🚀 Deploy to GitHub Pages
 
 ```bash
+# 1. Create repo named yourusername.github.io on GitHub
+
+# 2. Initialize and push
 git init
 git add .
 git commit -m "Initial portfolio"
 git branch -M main
-git remote add origin https://github.com/yourusername/yourusername.github.io.git
+git remote add origin https://github.com/YOURUSERNAME/YOURUSERNAME.github.io.git
 git push -u origin main
+
+# 3. Live at https://YOURUSERNAME.github.io
 ```
-
-3. Your site will be live at `https://yourusername.github.io`
-
-### Option 2: Project Repository
-
-1. Create any repository (e.g., `portfolio`)
-2. Push the code
-3. Go to **Settings → Pages**
-4. Under "Source", select **main** branch and **/ (root)** folder
-5. Your site will be at `https://yourusername.github.io/portfolio`
 
 ## 📁 Structure
 
 ```
 portfolio/
-├── index.html              # Main page (all sections)
+├── index.html           # Main page
 ├── css/
-│   ├── style.css          # Global styles
-│   └── project.css        # Project detail page styles
+│   ├── style.css        # Main styles
+│   └── personal.css     # Personal page styles
 ├── js/
-│   └── main.js            # Network animation + interactions
-├── projects/
-│   ├── mdd-biomarkers.html    # Project detail template
-│   └── [other projects...]
-├── img/                   # Add your images here
-│   └── travel/            # Travel photos for Funside
-└── README.md
+│   ├── config.js        # All content data (edit this!)
+│   └── main.js          # Rendering logic
+├── pages/
+│   └── personal.html    # Travel, Football, Poetry page
+└── img/                 # Your images
 ```
 
-## ✏️ Customization Checklist
+## ✏️ Customize
 
-### Required Updates
+### 1. Edit `js/config.js`
 
-- [ ] **index.html**: Update contact links (email, GitHub, LinkedIn, Scholar)
-- [ ] **index.html**: Add your actual project descriptions
-- [ ] **index.html**: Update experience section with your actual roles
-- [ ] **index.html**: Add poem content in `js/main.js`
-- [ ] **projects/**: Create detail pages for each project
-- [ ] **img/**: Add travel photos and any diagrams
+All your content is in one file:
+- Personal info & social links
+- Projects (title, description, skills, results, GitHub link)
+- Experience timeline
+- Skills
+- Research
 
-### Project Pages
+### 2. Add Images
 
-Each project needs these sections (as per spec):
+- Put headshots in `img/` folder
+- Update the carousel in `index.html`
+- Add travel photos to `pages/personal.html`
 
-1. Title
-2. One-line summary
-3. Problem Statement
-4. Why This Problem Matters
-5. Data Description
-6. Methodology
-7. Architecture / Flow Diagram
-8. Results / Findings
-9. Assumptions & Constraints
-10. Limitations
-11. Tech Stack
-12. Links (GitHub / Paper / Data)
+### 3. Update Links
 
-Use `projects/mdd-biomarkers.html` as your template.
+Search for `yourusername` and `your.email@example.com` and replace with your actual info.
 
-## 🎨 Design Notes
+## 🎨 Design
 
-The design follows these principles from the spec:
+- Modern gradient backgrounds
+- Card-based layouts with hover effects
+- Dark sections for contrast
+- Responsive mobile menu
+- Photo carousel in hero
 
-- **Visual Motifs**: Network graph animation (hero), mathematical symbols (section dividers), grid-based layouts
-- **Typography**: Source Serif 4 (headings), Inter (body), JetBrains Mono (code/labels)
-- **Colors**: Muted, analytical palette — no flashy colors
-- **No Forbidden Elements**: No progress bars, chat interfaces, dashboards, or skill percentages
-
-## 🔧 Local Development
-
-Just open `index.html` in a browser. No build step required.
-
-For live reload during development:
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node
-npx serve
-```
-
-Then visit `http://localhost:8000`
-
-## 📱 Responsive
-
-- Desktop-first design
-- Fully responsive down to 320px width
-- Mobile navigation with hamburger menu
-
-## ♿ Accessibility
-
-- Semantic HTML
-- Keyboard navigable
-- Reduced motion support (`prefers-reduced-motion`)
-- Sufficient color contrast
-
----
-
-Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools.
+Built with vanilla HTML/CSS/JS. No build step required.
