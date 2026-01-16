@@ -24,7 +24,7 @@ const CONFIG = {
         "img/img3.jpg",
         "img/img4.jpg"
     ],
-
+    resume: "assets/Vybhav Chaturvedi_CV.pdf",
     // Social Links
     social: {
         email: "vybhavchaturvedi@gmail.com",
