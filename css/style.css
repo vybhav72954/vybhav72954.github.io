@@ -107,13 +107,43 @@ body {
     align-items: center;
 }
 
+/* ============================================
+   TERMINAL LOGO STYLES
+   ============================================ */
+
+/* The Blinking Cursor Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text-light);
-    text-decoration: none;
-    letter-spacing: -0.02em;
+    /* Ensure it overrides any other font settings */
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700 !important; /* Make it bold like a prompt */
+    letter-spacing: -0.03em;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem
+}
+
+/* Color coding for the path symbols */
+.logo-path {
+    color: var(--color-text-light); /* Standard text color for /VC */
+}
+
+.logo-tilde {
+    color: var(--color-primary); /* Blue for Home directory ~ */
+}
+
+/* The Cursor Style */
+.logo-cursor {
+    display: inline-block;
+    color: var(--color-primary);
+    margin-left: 2px;
+    font-weight: 900;
+    animation: blink 1s step-end infinite;
+    line-height: 1;
 }
 
 .nav-menu {
@@ -227,6 +257,14 @@ body {
     color: var(--color-primary);
     font-weight: 500;
     margin-bottom: var(--space-sm);
+}
+
+.hero-terminal {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    opacity: 0.8;
 }
 
 .hero-name {

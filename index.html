@@ -6,6 +6,13 @@
     <meta name="description" content="Portfolio">
     <title id="page-title">Loading...</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +22,11 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">VC</a>
+            <a href="#home" class="nav-logo">
+                <span class="logo-tilde">~</span>
+                <span class="logo-path">/VC</span>
+                <span class="logo-cursor">_</span>
+            </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -40,6 +51,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <p class="hero-terminal">$ whoami</p>
                     <p class="hero-greeting">Hi, I'm</p>
                     <h1 class="hero-name" id="hero-name"></h1>
                     <h2 class="hero-title" id="hero-title"></h2>
@@ -75,6 +87,7 @@
     <section class="section" id="about">
         <div class="container">
             <h2 class="section-title"><span class="title-number">[0]</span> About Me</h2>
+            <p class="section-ds-label light">self.__init__()</p>
             <div class="about-content">
                 <div class="about-text" id="about-text"></div>
                 <div class="about-details">
@@ -95,6 +108,7 @@
     <section class="section section-dark" id="projects">
         <div class="container">
             <h2 class="section-title"><span class="title-number">[1]</span> Projects</h2>
+            <p class="section-ds-label">SELECT * FROM projects</p>
             <div class="projects-grid" id="projects-grid"></div>
         </div>
     </section>
@@ -102,6 +116,7 @@
     <section class="section" id="research">
         <div class="container">
             <h2 class="section-title"><span class="title-number">[2]</span> Research & Writing</h2>
+            <p class="section-ds-label light">from research import publications</p>
 
             <div class="research-subsection">
                 <h3 class="subsection-title">Publications</h3>
