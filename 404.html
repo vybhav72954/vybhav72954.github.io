@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Page Not Found</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #2563eb;
+            --color-accent: #06b6d4;
+            --color-bg-dark: #0f172a;
+            --color-text-dark: #f1f5f9;
+            --color-text-dark-secondary: #94a3b8;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg-dark);
+            color: var(--color-text-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-container {
+            max-width: 500px;
+        }
+
+        .error-code {
+            font-family: var(--font-mono);
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 60px rgba(37, 99, 235, 0.3);
+        }
+
+        .error-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-message {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--color-accent);
+            background: rgba(6, 182, 212, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .error-message code {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .error-suggestion {
+            color: var(--color-text-dark-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .error-link {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: var(--color-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .error-link:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background: var(--color-accent);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+
+        <div class="error-message">
+            <code>FileNotFoundError:</code>
+            <code>Path not found in namespace</code>
+            <code>>>> model.predict(your_url)<span class="terminal-cursor"></span></code>
+        </div>
+
+        <p class="error-suggestion">
+            The page you're looking for doesn't exist or has been moved.
+            <br>Let's get you back on track.
+        </p>
+
+        <a href="index.html" class="error-link">Return Home</a>
+    </div>
+</body>
+</html>

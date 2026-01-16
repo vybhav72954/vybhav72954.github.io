@@ -107,13 +107,43 @@ body {
     align-items: center;
 }
 
+/* ============================================
+   TERMINAL LOGO STYLES
+   ============================================ */
+
+/* The Blinking Cursor Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text-light);
-    text-decoration: none;
-    letter-spacing: -0.02em;
+    /* Ensure it overrides any other font settings */
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700 !important; /* Make it bold like a prompt */
+    letter-spacing: -0.03em;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem
+}
+
+/* Color coding for the path symbols */
+.logo-path {
+    color: var(--color-text-light); /* Standard text color for /VC */
+}
+
+.logo-tilde {
+    color: var(--color-primary); /* Blue for Home directory ~ */
+}
+
+/* The Cursor Style */
+.logo-cursor {
+    display: inline-block;
+    color: var(--color-primary);
+    margin-left: 2px;
+    font-weight: 900;
+    animation: blink 1s step-end infinite;
+    line-height: 1;
 }
 
 .nav-menu {
@@ -194,11 +224,12 @@ body {
     );
 }
 
-.hero-pattern {
+#network-canvas {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0);
-    background-size: 40px 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-container {
@@ -226,6 +257,14 @@ body {
     color: var(--color-primary);
     font-weight: 500;
     margin-bottom: var(--space-sm);
+}
+
+.hero-terminal {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    opacity: 0.8;
 }
 
 .hero-name {
@@ -986,7 +1025,7 @@ body {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: var(--space-lg);
+    padding: var(--space-md);
 }
 
 .timeline-item.left {
@@ -998,6 +1037,15 @@ body {
     left: 50%;
     padding-left: var(--space-xl);
     text-align: left;
+    margin-top: -80px;
+}
+
+.timeline-item.left + .timeline-item.left {
+    margin-top: -40px;
+}
+
+.timeline-item.right + .timeline-item.right {
+    margin-top: -40px;
 }
 
 .timeline-marker {
@@ -1277,6 +1325,42 @@ body {
     color: var(--color-text-dark-secondary);
 }
 
+.ds-notation {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+    margin-top: var(--space-xs);
+}
+
+/* DS Themed Elements */
+.ds-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border-light);
+    opacity: 0.8;
+}
+
+.section-ds-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xl);
+    opacity: 0.7;
+}
+
+.section-ds-label.light {
+    color: var(--color-primary);
+}
+
+.ds-code {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -1376,6 +1460,12 @@ body {
         padding-left: 50px;
         padding-right: 0;
         text-align: left;
+        margin-top: 0;
+    }
+
+    .timeline-item.left + .timeline-item.left,
+    .timeline-item.right + .timeline-item.right {
+        margin-top: 0;
     }
 
     .timeline-item.left .timeline-marker,
