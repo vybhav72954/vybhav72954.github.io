@@ -6,55 +6,56 @@
 const CONFIG = {
     // Personal Info
     name: "Vybhav Chaturvedi",
-    title: "Machine Learning Engineer & Data Scientist",
+    title: "Machine Learning Engineer || Data Scientist",
     subtitle: "Applied Research & Decision Systems",
     
     credentials: [
-        "PGDBA (ISI Kolkata · IIT Kharagpur · IIM Calcutta)",
-        "Ex–ZS Associates"
+        "Data Science @ ISI Kolkata · IIT Kharagpur · IIM Calcutta",
+        "Ex–ZS Associates",
+        "Computer Science Engineer @ Thapar University"
     ],
-    
+
     tagline: "Working at the intersection of statistical rigor, real-world data complexity, and production-aware ML systems.",
-    
+
     // Headshot images for carousel
     headshots: [
         "img/headshot-1.jpg",
         "img/headshot-2.jpg",
         "img/headshot-3.jpg"
     ],
-    
+
     // Social Links
     social: {
-        email: "your.email@example.com",
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourusername",
-        instagram: "https://instagram.com/yourusername",
-        scholar: "https://scholar.google.com/citations?user=yourid",
-        devto: "https://dev.to/yourusername",
-        medium: "https://medium.com/@yourusername"  // TDS articles
+        email: "vybhavchaturvedi@gmail.com",
+        github: "https://github.com/vybhav72954",
+        linkedin: "https://www.linkedin.com/in/vybhav-chaturvedi-0ba82614a/",
+        instagram: "https://instagram.com/vybhav72954",
+        scholar: "https://scholar.google.com/citations?user=_jvxtqQAAAAJ&hl=en&authuser=5",
+        devto: "https://dev.to/vybhav",
+        medium: "https://medium.com/@vybhav"
     },
-    
+
     // About Section
     about: {
         intro: [
             "I build machine learning systems that work in production — not just in notebooks.",
-            "My work spans computational biology, time series forecasting, and anomaly detection, always grounded in statistical rigor and interpretability."
+            "My work spans computational biology (focus on psychiatry), time series forecasting, and anomaly detection, always grounded in statistical rigor and interpretability."
         ],
         philosophy: [
             "Accuracy over speed",
-            "Interpretability over opacity", 
+            "Interpretability over accuracy",
             "Validation over blind deployment",
-            "Systems over isolated models",
+            "End-to-end systems over isolated models",
             "Uncertainty quantification is not optional"
         ],
         snapshot: {
-            education: "PGDBA (Joint ISI–IIT–IIM)",
-            experience: "3.5+ years Analytics / ML",
+            education: "PGDBA (Joint ISI–IIT–IIM) || MBA (Thapar University) || B.E. Comp Sci (Thapar University)",
+            experience: "3.5+ years Applied Analytics / ML",
             domains: "Healthcare · Enterprise · Research"
         }
     },
-    
-    // Projects - Simple cards
+
+    // Projects
     projects: [
         {
             id: "mdd-biomarkers",
@@ -123,128 +124,8 @@ const CONFIG = {
             featured: false
         }
     ],
-    
-    // Research & Publications
-    research: {
-        publications: [
-            {
-                title: "Endothelial Cell Signatures in Major Depressive Disorder: A Blood Transcriptomic Analysis",
-                status: "working", // working, submitted, published
-                target: "Brain, Behavior, and Immunity",
-                abstract: "Computational analysis of blood transcriptomic data reveals endothelial cell dysfunction as a potential biomarker for MDD.",
-                link: null
-            }
-        ],
-        blogs: {
-            devto: "https://dev.to/yourusername",
-            medium: "https://medium.com/@yourusername"
-        }
-    },
-    
-    // Experience Timeline
-    experience: [
-        {
-            title: "Graduate Student — PGDBA",
-            org: "ISI Kolkata · IIT Kharagpur · IIM Calcutta",
-            period: "2024 — Present",
-            points: [
-                "Computational biology research on MDD biomarker discovery",
-                "Advanced coursework in statistical learning and optimization",
-                "Cross-institutional collaboration across statistics, engineering, and business"
-            ]
-        },
-        {
-            title: "Analytics Engineer",
-            org: "ZS Associates",
-            period: "2021 — 2024",
-            points: [
-                "Built agentic AI systems for pharmaceutical report analysis",
-                "Developed anomaly detection pipelines for clinical trial data",
-                "Led statistical modeling initiatives for client decision support"
-            ]
-        }
-    ],
-    
-    // Skills (from Resume)
-    skills: {
-        "Languages": ["Python", "R", "SQL", "HTML/CSS", "C++", "XML/YAML"],
-        "ML & Deep Learning": [
-            "TensorFlow", "Keras", "Sklearn", "Spark", "Hadoop",
-            "Ensemble Methods", "LSTMs", "Model Evaluation", "Feature Engineering"
-        ],
-        "Frameworks & Tools": [
-            "Django", "Flask", "FastAPI", "Docker", "Git",
-            "MySQL", "MongoDB", "SQLite", "Selenium"
-        ],
-        "Analytics & BI": [
-            "PowerBI", "SPSS", "Advanced Excel (VBA, Macros)",
-            "Pandas", "Matplotlib", "ETL Pipelines"
-        ],
-        "Computational Biology": [
-            "Differential Expression (limma, DESeq2)", "Cell-Type Deconvolution",
-            "Consensus Clustering", "Pathway Enrichment", "Batch Effect Correction"
-        ],
-        "Other": [
-            "API Documentation", "Agile", "CI/CD", "GitHub Actions", "AWS (EC2, S3, ElasticSearch)"
-        ]
-    },
 
-    // Experience (from Resume - proper timeline)
-    experienceTimeline: [
-        {
-            side: "left",
-            title: "Graduate Student — PGDBA",
-            org: "ISI Kolkata · IIT Kharagpur · IIM Calcutta",
-            period: "2024 — Present",
-            points: [
-                "Computational biology research on MDD biomarker discovery",
-                "Advanced coursework in statistical learning and optimization"
-            ]
-        },
-        {
-            side: "right",
-            title: "Associate Consultant",
-            org: "ZS Associates",
-            period: "Jan 2022 — Aug 2024",
-            points: [
-                "Led team of 4 associates for Go-to-Market & Product Management",
-                "Built 'Case Study Finder' using Python & AWS (EC2, ElasticSearch, S3)",
-                "Developed Python ETL pipelines boosting efficiency by 8-20%"
-            ]
-        },
-        {
-            side: "left",
-            title: "ML Fellow",
-            org: "Fellowship.ai - Launchpad",
-            period: "Apr 2022 — Jun 2022",
-            points: [
-                "Music moderation ML system for piano performance analysis",
-                "Achieved 94% accuracy for beat detection"
-            ]
-        },
-        {
-            side: "right",
-            title: "Project Development Intern",
-            org: "BookThatStudio - Comet Spaces",
-            period: "Jun 2021 — Aug 2021",
-            points: [
-                "Designed website from scratch using ReactJS, NodeJS",
-                "Integrated payment gateway and social media logins"
-            ]
-        },
-        {
-            side: "left",
-            title: "B.E. + MBA (Integrated)",
-            org: "Thapar Institute of Engineering and Technology",
-            period: "Apr 2017 — Jul 2022",
-            points: [
-                "Computer Engineering & Business Administration",
-                "Focus: Computer Networks, ML, Business Development"
-            ]
-        }
-    ],
-
-    // Research Publications & Patent
+    // Publications & Patent
     publications: [
         {
             type: "paper",
@@ -275,83 +156,104 @@ const CONFIG = {
         }
     ],
 
-    // Blog Posts (add new posts here)
-    blogPosts: [
-        {
-            title: "Beginner's Guide to Auto Formatting",
-            platform: "DEV.to",
-            url: "https://dev.to/vybhav/beginners-guide-to-auto-formatting-1hpp",
-            description: "Setting up automatic code formatting for cleaner, consistent code."
-        },
-        {
-            title: "First Steps in GirlScript Summer of Code '21",
-            platform: "DEV.to",
-            url: "https://dev.to/vybhav/first-steps-in-girlscript-summer-of-code-21-2353",
-            description: "My journey getting started with open source contributions."
-        },
-        {
-            title: "Let's Talk About sys",
-            platform: "DEV.to",
-            url: "https://dev.to/vybhav/let-s-talk-about-sys-25mf",
-            description: "Deep dive into Python's sys module and its practical uses."
-        }
-        // Add more posts here as you publish them
-        // {
-        //     title: "Your TDS Article Title",
-        //     platform: "Towards Data Science",
-        //     url: "https://medium.com/...",
-        //     description: "Brief description"
-        // }
-    ],
-
-    // Profile Links
-    profiles: {
-        devto: "https://dev.to/vybhav",
-        medium: "https://medium.com/@yourusername"  // Update when you publish on TDS
-    },
-
     // Blog Posts
     blogPosts: [
         {
             title: "Beginner's Guide to Auto-Formatting",
             platform: "DEV.to",
             url: "https://dev.to/vybhav/beginners-guide-to-auto-formatting-1hpp",
-            thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8epumer909hqgvb5lxnj.png",
+            thumbnail: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3kbz6e104auz9ighefkt.jpg",
             date: "2021"
         },
         {
             title: "First Steps in GirlScript Summer of Code '21",
             platform: "DEV.to",
             url: "https://dev.to/vybhav/first-steps-in-girlscript-summer-of-code-21-2353",
-            thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xran5sbyfrfrxvudpvlg.png",
+            thumbnail: "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr1v7iyspirmb0493p05p.png",
             date: "2021"
         },
         {
             title: "Let's Talk About Sys",
             platform: "DEV.to",
             url: "https://dev.to/vybhav/let-s-talk-about-sys-25mf",
-            thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vvlp6a8lcl5l5ybq0tap.png",
+            thumbnail: "https://codebl0g.wordpress.com/wp-content/uploads/2019/07/python-software-logo-2.jpg",
+            date: "2021"
+        },
+        {
+            title: "Welcome to my First Blog",
+            platform: "TDS",
+            url: "https://medium.com/@vybhav/welcome-to-my-first-blog-208a97eac694",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg    ",
             date: "2021"
         }
     ],
 
-    // Blog Profiles (for links at bottom)
-    blogProfiles: {
-        devto: "https://dev.to/vybhav",
-        medium: "https://medium.com/@yourusername"  // Update when you publish
-    },
-
-    // Blog platforms
-    blogs: {
-        devto: {
-            name: "DEV.to",
-            url: "https://dev.to/yourusername",
-            description: "Technical tutorials and ML insights"
+    // Experience Timeline (for the timeline section)
+    experience: [
+        {
+            side: "left",
+            title: "Graduate Student — PGDBA",
+            org: "ISI Kolkata · IIT Kharagpur · IIM Calcutta",
+            period: "2024 — Present",
+            points: [
+                "Computational biology research on MDD biomarker discovery",
+                "Advanced coursework in statistical learning and optimization"
+            ]
         },
-        medium: {
-            name: "Towards Data Science",
-            url: "https://medium.com/@yourusername",
-            description: "Data science articles and research"
+        {
+            side: "right",
+            title: "Associate -> Associate Consultant",
+            org: "ZS Associates",
+            period: "Jan 2022 — Aug 2024",
+            points: [
+                "Led team of 4 associates for Go-to-Market & Product Management",
+                "Built 'Case Study Finder' using Python & AWS (EC2, ElasticSearch, S3)",
+                "Developed Python ETL pipelines boosting efficiency by 8-20%"
+            ]
+        },
+        {
+            side: "left",
+            title: "ML Fellow",
+            org: "Fellowship.ai - Launchpad",
+            period: "Apr 2022 — Jun 2022",
+            points: [
+                "Music moderation ML system for piano performance analysis",
+                "Achieved 94% accuracy for beat detection"
+            ]
+        },
+        {
+            side: "right",
+            title: "B.E. & MBA",
+            org: "Thapar Institute of Engineering and Technology",
+            period: "Apr 2017 — Jul 2022",
+            points: [
+                "Computer Engineering & Business Administration",
+                "Focus: Computer Networks, ML, Business Development"
+            ]
         }
+    ],
+
+    // Skills
+    skills: {
+        "Languages": ["Python", "Go", "SQL", "HTML/CSS", "C++", "XML/YAML"],
+        "ML & Deep Learning": [
+            "TensorFlow", "Keras", "Sklearn", "Spark", "Hadoop",
+            "Ensemble Methods", "LSTMs", "Model Evaluation", "Feature Engineering"
+        ],
+        "Frameworks & Tools": [
+            "Flask", "FastAPI", "Docker", "Git",
+            "MySQL", "MongoDB", "SQLite", "Selenium", "Streamlit"
+        ],
+        "Analytics & BI": [
+            "PowerBI", "Advanced Excel (VBA, Macros)",
+            "Pandas", "Matplotlib", "Seaborn", "Plotly"
+        ],
+        "Computational Biology": [
+            "Differential Expression (limma, DESeq2)", "Cell-Type Deconvolution",
+            "Consensus Clustering", "Pathway Enrichment", "Batch Effect Correction"
+        ],
+        "Other": [
+            "Documentation", "Agile", "GitHub Actions", "AWS (EC2, S3, ElasticSearch)"
+        ]
     }
 };
