@@ -194,11 +194,12 @@ body {
     );
 }
 
-.hero-pattern {
+#network-canvas {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0);
-    background-size: 40px 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-container {
@@ -1275,6 +1276,23 @@ body {
 .footer-right {
     font-size: 0.85rem;
     color: var(--color-text-dark-secondary);
+}
+
+.footer-ds {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-xl) 0;
+    text-align: center;
+    border-top: 1px solid var(--color-border-dark);
+    margin-top: var(--space-lg);
+}
+
+.ds-notation {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    opacity: 0.8;
 }
 
 /* ============================================
