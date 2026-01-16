@@ -307,7 +307,7 @@
         };
 
         const next = () => update(current + 1);
-        const start = () => interval = setInterval(next, 8000);
+        const start = () => interval = setInterval(next, 4000);
         const stop = () => clearInterval(interval);
 
         dots.forEach((dot, i) => dot.addEventListener('click', () => { stop(); update(i); start(); }));

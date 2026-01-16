@@ -47,12 +47,13 @@ const CONFIG = {
             "Interpretability over accuracy",
             "Validation over blind deployment",
             "End-to-end systems over isolated models",
-            "Uncertainty quantification is not optional"
+            "Uncertainty quantification is not optional",
+            "Insights over numbers"
         ],
         snapshot: {
-            education: "PGDBA (Joint ISI–IIT–IIM) || MBA (Thapar University) || B.E. Comp Sci (Thapar University)",
+            achievement: "150+ Citations across Publications || Mentor - GirlScript Summer of Code'2021 || Winner - National Semester Long Project (SLoP) - DA-IICT || Runner up - Script Winter of Code",
             experience: "3.5+ years Applied Analytics / ML",
-            domains: "Healthcare · Enterprise · Research"
+            interests: "Healthcare · Computational Psychiatry · Human Computer Interfacing"
         }
     },
 
