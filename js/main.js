@@ -11,17 +11,40 @@
 
     function init() {
         renderProjects();
-        renderTimeline();
         renderSkills();
+        renderBlogs();
         initNavigation();
         initCarousel();
         initSmoothScroll();
     }
 
     // ============================================
+    // RENDER BLOGS
+    // ============================================
+
+    function renderBlogs() {
+        const container = document.getElementById('blog-posts-grid');
+        if (!container || !CONFIG.blogPosts) return;
+
+        const html = CONFIG.blogPosts.map(post => `
+            <a href="${post.url}" target="_blank" rel="noopener" class="blog-post-card">
+                <div class="blog-post-img" style="background-image: url('${post.thumbnail}')">
+                    <span class="blog-platform-badge">${post.platform}</span>
+                </div>
+                <div class="blog-post-info">
+                    <h4>${post.title}</h4>
+                    <span class="blog-read-more">Read Article →</span>
+                </div>
+            </a>
+        `).join('');
+
+        container.innerHTML = html;
+    }
+
+    // ============================================
     // RENDER PROJECTS
     // ============================================
-    
+
     function renderProjects() {
         const container = document.getElementById('projects-grid');
         if (!container || !CONFIG.projects) return;
@@ -51,34 +74,9 @@
     }
 
     // ============================================
-    // RENDER TIMELINE
-    // ============================================
-    
-    function renderTimeline() {
-        const container = document.getElementById('timeline');
-        if (!container || !CONFIG.experience) return;
-
-        const html = CONFIG.experience.map(exp => `
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3>${exp.title}</h3>
-                    <span class="timeline-org">${exp.org}</span>
-                    <span class="timeline-period">${exp.period}</span>
-                    <ul class="timeline-points">
-                        ${exp.points.map(point => `<li>${point}</li>`).join('')}
-                    </ul>
-                </div>
-            </div>
-        `).join('');
-
-        container.innerHTML = html;
-    }
-
-    // ============================================
     // RENDER SKILLS
     // ============================================
-    
+
     function renderSkills() {
         const container = document.getElementById('skills-container');
         if (!container || !CONFIG.skills) return;
@@ -98,11 +96,11 @@
     // ============================================
     // NAVIGATION
     // ============================================
-    
+
     function initNavigation() {
         const toggle = document.getElementById('nav-toggle');
         const menu = document.getElementById('nav-menu');
-        
+
         if (!toggle || !menu) return;
 
         toggle.addEventListener('click', () => {
@@ -127,7 +125,7 @@
     // ============================================
     // HEADSHOT CAROUSEL
     // ============================================
-    
+
     function initCarousel() {
         const carousel = document.getElementById('headshot-carousel');
         if (!carousel) return;
@@ -140,11 +138,11 @@
         function goToSlide(index) {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
-            
+
             currentSlide = index;
             if (currentSlide >= slides.length) currentSlide = 0;
             if (currentSlide < 0) currentSlide = slides.length - 1;
-            
+
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
         }
@@ -182,20 +180,20 @@
     // ============================================
     // SMOOTH SCROLL
     // ============================================
-    
+
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 if (href === '#') return;
-                
+
                 e.preventDefault();
                 const target = document.querySelector(href);
-                
+
                 if (target) {
                     const navHeight = document.querySelector('.nav').offsetHeight;
                     const targetPosition = target.offsetTop - navHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
