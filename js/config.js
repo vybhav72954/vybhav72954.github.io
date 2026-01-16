@@ -19,9 +19,10 @@ const CONFIG = {
 
     // Headshot images for carousel
     headshots: [
-        "img/headshot-1.jpg",
-        "img/headshot-2.jpg",
-        "img/headshot-3.jpg"
+        "img/img1.jpg",
+        "img/img2.jpg",
+        "img/img3.jpg",
+        "img/img4.jpg"
     ],
 
     // Social Links
