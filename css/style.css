@@ -1,10 +1,9 @@
 /* ============================================
    PORTFOLIO STYLES — Vybhav Chaturvedi
-   Better Visual Design
    ============================================ */
 
 :root {
-    /* Color Palette - Sophisticated dark/light */
+    /* Color Palette */
     --color-primary: #2563eb;
     --color-primary-dark: #1d4ed8;
     --color-accent: #06b6d4;
@@ -111,14 +110,13 @@ body {
    TERMINAL LOGO STYLES
    ============================================ */
 
-/* The Blinking Cursor Animation */
+/* Blinking Cursor */
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
 
 .nav-logo {
-    /* Ensure it overrides any other font settings */
     font-family: 'JetBrains Mono', monospace !important;
     font-weight: 700 !important; /* Make it bold like a prompt */
     letter-spacing: -0.03em;
@@ -127,16 +125,14 @@ body {
     font-size: 1.5rem;
 }
 
-/* Color coding for the path symbols */
 .logo-path {
-    color: var(--color-text-light); /* Standard text color for /VC */
+    color: var(--color-text-light);
 }
 
 .logo-tilde {
-    color: var(--color-primary); /* Blue for Home directory ~ */
+    color: var(--color-primary);
 }
 
-/* The Cursor Style */
 .logo-cursor {
     display: inline-block;
     color: var(--color-primary);
@@ -346,26 +342,22 @@ body {
     height: 18px;
 }
 
-/* Hero Image / Carousel */
 .hero-image {
     position: relative;
 }
 
-/* UNIVERSAL CAROUSEL FIX (Works on Desktop AND Mobile) */
 .image-carousel {
     position: relative;
     width: 100%;
-    /* Force 4:3 Aspect Ratio (Height = 133% of Width) */
     padding-bottom: 133.33%;
     height: 0;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
-    background: var(--color-surface-dark); /* Visible placeholder background */
+    background: var(--color-surface-dark);
 }
 
 .carousel-track {
-    /* Absolute position to fill the padded area */
     position: absolute;
     top: 0;
     left: 0;
@@ -399,7 +391,7 @@ body {
     justify-content: center;
     color: var(--color-text-light-secondary);
     font-size: 1.1rem;
-    position: absolute; /* Added to ensure it sits behind image */
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -411,7 +403,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: var(--space-sm);
-    z-index: 2; /* Ensure dots are above image */
+    z-index: 2;
 }
 
 .dot {
@@ -440,7 +432,6 @@ body {
     z-index: -1;
 }
 
-/* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
     bottom: var(--space-xl);
@@ -669,6 +660,24 @@ body {
     font-weight: 600;
     color: var(--color-text-dark);
     margin-bottom: var(--space-xs);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.5em;
+    line-height: 1.3;
+}
+
+.project-card.featured {
+    border: 1px solid #f59e0b;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+    background: linear-gradient(to bottom right, var(--color-surface-dark), rgba(245, 158, 11, 0.03));
+}
+
+.project-card.featured:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
+    border-color: #fbbf24;
 }
 
 .project-subtitle {
@@ -735,6 +744,28 @@ body {
     height: 16px;
 }
 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.featured-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-weight: 600;
+}
+
+.project-category {
+    margin-bottom: 0;
+}
 /* ============================================
    RESEARCH SECTION
    ============================================ */
@@ -758,7 +789,6 @@ body {
     border-bottom: 1px solid var(--color-border-light);
 }
 
-/* Publications Grid */
 .publications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -845,7 +875,6 @@ body {
     text-decoration: underline;
 }
 
-/* Patent Card */
 .patent-card {
     background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
     padding: var(--space-xl);
@@ -956,7 +985,6 @@ body {
     font-weight: 500;
 }
 
-/* Blog Profile Links */
 .blog-profiles {
     display: flex;
     align-items: center;
@@ -977,7 +1005,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
-    padding: 0.6rem 1rem; /* Slightly larger touch target */
+    padding: 0.6rem 1rem;
     border-radius: 8px;
     font-family: var(--font-body);
     font-size: 0.85rem;
@@ -1344,7 +1372,6 @@ body {
     margin-top: var(--space-xs);
 }
 
-/* DS Themed Elements */
 .ds-tagline {
     font-family: var(--font-mono);
     font-size: 0.8rem;
@@ -1377,7 +1404,6 @@ body {
    ============================================ */
 
 @media (max-width: 992px) {
-    /* 1. FORCE MOBILE LAYOUT */
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1386,21 +1412,19 @@ body {
 
     .hero-text {
         max-width: 100%;
-        order: 2; /* Text below image */
+        order: 2;
     }
 
     .hero-image {
-        order: 1; /* Image first */
+        order: 1;
         max-width: 320px;
         margin: 0 auto;
         width: 100%;
     }
 
-    /* 2. FORCE CAROUSEL VISIBILITY */
     .image-carousel {
         position: relative;
         width: 100%;
-        /* Force 4:3 Aspect Ratio (Height = 133% of Width) */
         padding-bottom: 133.33%;
         height: 0;
         border-radius: 16px;
@@ -1539,7 +1563,6 @@ body {
         font-size: 0.75rem;
     }
 
-    /* Contact grid mobile */
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }

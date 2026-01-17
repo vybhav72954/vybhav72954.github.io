@@ -4,7 +4,6 @@
  */
 
 const CONFIG = {
-    // Personal Info
     name: "Vybhav Chaturvedi",
     title: "Machine Learning Engineer || Data Scientist",
     subtitle: "Applied Research & Decision Systems",
@@ -17,7 +16,6 @@ const CONFIG = {
 
     tagline: "Working at the intersection of statistical rigor, real-world data complexity, and production-aware ML systems.",
 
-    // Headshot images for carousel
     headshots: [
         "img/img1.jpg",
         "img/img2.jpg",
@@ -25,7 +23,6 @@ const CONFIG = {
         "img/img4.jpg"
     ],
     resume: "assets/Vybhav Chaturvedi_CV.pdf",
-    // Social Links
     social: {
         email: "vybhavchaturvedi@gmail.com",
         github: "https://github.com/vybhav72954",
@@ -36,7 +33,6 @@ const CONFIG = {
         medium: "https://medium.com/@vybhav"
     },
 
-    // About Section
     about: {
         intro: [
             "I build machine learning systems that work in production — not just in notebooks.",
@@ -57,17 +53,16 @@ const CONFIG = {
         }
     },
 
-    // Projects
     projects: [
         {
             id: "mdd-biomarkers",
-            category: "Computational Biology",
-            title: "MDD Biomarker Discovery",
-            subtitle: "Blood Transcriptomic Analysis",
+            category: "Healthcare",
+            title: "MDD (Depression) Biomarker Discovery",
+            subtitle: "Blood Transcriptomic Validation Study",
             description: "Identifying blood-based biomarkers for Major Depressive Disorder using cell-type deconvolution and consensus clustering across multiple GEO datasets.",
-            skills: ["R", "limma", "CIBERSORTx", "Consensus Clustering"],
+            skills: ["Python", "WGCNA", "Multivariate Regression", "Consensus Clustering"],
             results: "247 DEGs identified, 3 molecular subtypes, 18% endothelial signature change",
-            github: "https://github.com/yourusername/mdd-biomarkers",
+            github: "https://github.com/vybhav72954/Depression-Gene-Expression",
             featured: true
         },
         {
@@ -76,22 +71,23 @@ const CONFIG = {
             title: "US Real Wages Analysis",
             subtitle: "Inflation-Adjusted Forecasting",
             description: "Comprehensive time series analysis with SARIMA, LSTM, and ensemble methods featuring bootstrap confidence intervals.",
-            skills: ["Python", "statsmodels", "TensorFlow", "Bootstrap"],
+            skills: ["Python", "statsmodels", "SARIMA", "Bootstrap", "Time Series"],
             results: "2.3% MAPE, 15% improvement over baseline, 94% CI coverage",
-            github: "https://github.com/yourusername/us-wages-analysis",
-            featured: true
+            github: "https://github.com/CWTYGs/US-Wages-Time-Series",
+            featured: false
         },
         {
-            id: "pharma-ai",
+            id: "agentic-ai",
             category: "Applied AI",
-            title: "Pharmaceutical Report Analysis",
-            subtitle: "Agentic RAG System",
+            title: "Cuckoo.ai",
+            subtitle: "Agentic RAG System for Pharma Reports",
             description: "RAG-powered agentic system for automated analysis of clinical and pharmaceutical documentation at scale.",
             skills: ["Python", "LangChain", "RAG", "Vector DBs"],
             results: "85% reduction in manual review time",
-            github: "https://github.com/yourusername/pharma-ai",
+            github: "https://github.com/CWTYGs/cuckoo.ai/tree/master    ",
             featured: true
         },
+        /*
         {
             id: "air-quality",
             category: "Environmental Analytics",
@@ -103,17 +99,19 @@ const CONFIG = {
             github: "https://github.com/yourusername/air-quality",
             featured: false
         },
+        */
         {
-            id: "anomaly-detection",
-            category: "Healthcare ML",
-            title: "Clinical Trial Anomaly Detection",
-            subtitle: "Data Quality Pipeline",
+            id: "rag-ai",
+            category: "Healthcare",
+            title: "Javelin.ai",
+            subtitle: "End to End Data Quality Pipeline",
             description: "Statistical methods for identifying data quality issues and protocol deviations in clinical trial datasets.",
             skills: ["Python", "Statistical Testing", "Anomaly Detection"],
-            results: "Automated detection of 12 anomaly types",
-            github: "https://github.com/yourusername/clinical-anomaly",
-            featured: false
+            results: "Automated detection, identified 387 sites (48 critical sites), AI-generated recommendations",
+            github: "https://github.com/vybhav72954/Javelin.ai",
+            featured: true
         },
+        /*
         {
             id: "ipl-auction",
             category: "Sports Analytics",
@@ -125,9 +123,42 @@ const CONFIG = {
             github: "https://github.com/yourusername/ipl-auction",
             featured: false
         }
+        */
+        {
+            id: "healthcare-ml",
+            category: "Emotion Detection",
+            title: "Multi-modal Bio-Signal Classification",
+            subtitle: "Emotion Detection using Machine Learning",
+            description: "Architected 3-phase affective computing pipeline correlating & dynamically map emotions to song mood using signal.",
+            skills: ["Python", "Regression", "Random Forest", "Ensemble"],
+            results: " Engineered 6k+ audio features, achieving 81.4% accuracy in 37 classes",
+            github: "https://github.com/vybhav72954/Music-Mood-Analysis",
+            featured: true
+        },
+        {
+            id: "dev",
+            category: "Full-Stack Dev",
+            title: "Project-PG",
+            subtitle: "Friends2Health Homoeopathy Clinic Website",
+            description: "Created an end-to-end website for a clinic built on GO and Svelte",
+            skills: ["GO", "Svelte", "JavaScript", "APIs"],
+            results: "Integrated Gmail, Razorpay, Google Calendar and created an Admin Dashboard for appointment management",
+            github: "https://friends2health.onrender.com/",
+            featured: true
+        },
+        {
+            id: "nlp",
+            category: "NLP",
+            title: "Image Caption Generator",
+            subtitle: "Automatic Image Captioning - Flickr-8k Dataset.",
+            description: "Using CNN models (Xception Model and Inception), created a pipeline for Image Captioning",
+            skills: ["Deep Learning", "CNNs", "NLP", "LSTM", "Python"],
+            results: "Created merge-architecture model using LSTM to map 2048-dim image features to 34-len text sequences achieving BLEU-1 score of 0.528",
+            github: "https://github.com/vybhav72954/Automated_Image_Captioning",
+            featured: false
+        },
     ],
 
-    // Publications & Patent
     publications: [
         {
             type: "paper",
@@ -158,7 +189,6 @@ const CONFIG = {
         }
     ],
 
-    // Blog Posts
     blogPosts: [
         {
             title: "Beginner's Guide to Auto-Formatting",
@@ -190,7 +220,6 @@ const CONFIG = {
         }
     ],
 
-    // Experience Timeline (for the timeline section)
     experience: [
         {
             side: "left",
@@ -235,7 +264,6 @@ const CONFIG = {
         }
     ],
 
-    // Skills
     skills: {
         "Languages": ["Python", "Go", "SQL", "HTML/CSS", "C++", "XML/YAML"],
         "ML & Deep Learning": [
