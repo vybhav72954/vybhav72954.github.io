@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vybhav72954.github.io/sitemap.xml
+
+# Disallow non-essential paths
+Disallow: /.git/
+Disallow: /.idea/
