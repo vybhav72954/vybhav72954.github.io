@@ -286,7 +286,7 @@
         track.innerHTML = CONFIG.headshots.map((src, i) => `
             <div class="carousel-slide ${i === 0 ? 'active' : ''}">
                 <div class="headshot-placeholder">
-                    <span>${i === 0 ? 'Your Photo' : `Photo ${i+1}`}</span>
+                    <span>${i === 0 ? '' : ``}</span>
                 </div>
                 <img src="${src}" alt="Headshot ${i+1}" 
                      loading="${i === 0 ? 'eager' : 'lazy'}"
@@ -313,7 +313,7 @@
         };
 
         const next = () => update(current + 1);
-        const start = () => interval = setInterval(next, 5000);
+        const start = () => interval = setInterval(next, 10000);
         const stop = () => clearInterval(interval);
 
         dots.forEach((dot, i) => dot.addEventListener('click', () => { stop(); update(i); start(); }));
