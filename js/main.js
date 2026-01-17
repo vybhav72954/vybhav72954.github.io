@@ -110,16 +110,26 @@
     // ============================================
     // 3. PROJECTS
     // ============================================
-    function renderProjects() {
+function renderProjects() {
         const container = document.getElementById('projects-grid');
         if (!container || !CONFIG.projects) return;
 
-        container.innerHTML = CONFIG.projects.map(project => `
+        // SORTING: Featured projects first, then others
+        const sortedProjects = [...CONFIG.projects].sort((a, b) => {
+            return (a.featured === b.featured) ? 0 : a.featured ? -1 : 1;
+        });
+
+        container.innerHTML = sortedProjects.map(project => `
             <article class="project-card ${project.featured ? 'featured' : ''}">
-                <span class="project-category">${project.category}</span>
+                <div class="card-header">
+                    <span class="project-category">${project.category}</span>
+                    ${project.featured ? '<span class="featured-badge">★ Featured</span>' : ''}
+                </div>
+                
                 <h3>${project.title}</h3>
                 <p class="project-subtitle">${project.subtitle}</p>
                 <p class="project-description">${project.description}</p>
+                
                 <div class="project-skills">
                     ${project.skills.map(skill => `<span class="project-skill">${skill}</span>`).join('')}
                 </div>
