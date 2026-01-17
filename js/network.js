@@ -1,6 +1,6 @@
 /**
  * Network Graph Animation
- * Animated nodes and edges for hero background - ML/DS themed
+ * Animated nodes and edges for hero background
  */
 
 (function() {
@@ -81,7 +81,6 @@
     function resize() {
         width = canvas.width = canvas.offsetWidth;
         height = canvas.height = canvas.offsetHeight;
-        // Recreate nodes on resize
         if (nodes.length > 0) createNodes();
     }
 
@@ -100,7 +99,6 @@
     }
 
     function drawConnections() {
-        // Node to node connections
         for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
                 const dx = nodes[i].x - nodes[j].x;
@@ -157,14 +155,12 @@
         animationId = requestAnimationFrame(animate);
     }
 
-    // Start
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
-    // Cleanup
     window.addEventListener('beforeunload', () => {
         cancelAnimationFrame(animationId);
     });

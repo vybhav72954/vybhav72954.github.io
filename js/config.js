@@ -53,7 +53,6 @@ const CONFIG = {
         }
     },
 
-    // Projects
     projects: [
         {
             id: "mdd-biomarkers",
@@ -160,7 +159,6 @@ const CONFIG = {
         },
     ],
 
-    // Publications & Patent
     publications: [
         {
             type: "paper",
@@ -191,7 +189,6 @@ const CONFIG = {
         }
     ],
 
-    // Blog Posts
     blogPosts: [
         {
             title: "Beginner's Guide to Auto-Formatting",
@@ -223,7 +220,6 @@ const CONFIG = {
         }
     ],
 
-    // Experience Timeline (for the timeline section)
     experience: [
         {
             side: "left",
