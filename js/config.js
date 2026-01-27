@@ -213,10 +213,17 @@ const CONFIG = {
         },
         {
             title: "Welcome to my First Blog",
-            platform: "TDS",
+            platform: "medium",
             url: "https://medium.com/@vybhav/welcome-to-my-first-blog-208a97eac694",
             thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg",
             date: "2021"
+        },
+        {
+            title: "Why PGDBA Might Be the Right Program for You (and Why It Isn’t)",
+            platform: "medium",
+            url: "https://vybhav.medium.com/why-pgdba-might-be-the-right-program-for-you-and-why-it-isnt-5cdd9950ad5d",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lgntudR8UirbwEAJagvkCw.jpeg",
+            date: "2026"
         }
     ],
 
