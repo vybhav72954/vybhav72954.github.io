@@ -88,7 +88,7 @@
         document.getElementById('about-text').innerHTML = CONFIG.about.intro.map(p => `<p>${p}</p>`).join('');
         document.getElementById('about-philosophy').innerHTML = CONFIG.about.philosophy.map(item => `<li>${item}</li>`).join('');
 
-        const snapshotMap = { education: "Education", experience: "Experience", domains: "Domains" };
+        const snapshotMap = { achievement: "Achievement", experience: "Experience", interests: "Interests" };
 
         document.getElementById('about-snapshot').innerHTML = Object.entries(CONFIG.about.snapshot).map(([key, value]) => {
             let formattedValue = value;
@@ -260,10 +260,13 @@
         document.getElementById('footer-name').textContent = CONFIG.name;
         document.getElementById('footer-title').textContent = CONFIG.title;
         document.getElementById('footer-year').textContent = `© ${new Date().getFullYear()}`;
-        document.getElementById('footer-links').innerHTML = Object.entries(CONFIG.social).map(([key, url]) => {
-            if (key === 'email') return '';
-            return `<a href="${url}" target="_blank" rel="noopener">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`;
-        }).join('');
+
+        const footerPlatforms = ['github', 'linkedin', 'scholar', 'instagram'];
+        const footerLabels = { github: 'GitHub', linkedin: 'LinkedIn', scholar: 'Scholar', instagram: 'Instagram' };
+        document.getElementById('footer-links').innerHTML = footerPlatforms
+            .filter(key => CONFIG.social[key])
+            .map(key => `<a href="${CONFIG.social[key]}" target="_blank" rel="noopener">${footerLabels[key]}</a>`)
+            .join('');
     }
 
     // ============================================

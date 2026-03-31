@@ -77,6 +77,39 @@ const CONFIG = {
             featured: false
         },
         {
+            id: "quantscribe",
+            category: "FinTech / RAG",
+            title: "QuantScribe",
+            subtitle: "Automated Thematic Peer Analysis for Indian Banks",
+            description: "RAG system and Streamlit app that ingests complex financial disclosures and converts them into quantifiable risk scores and structured peer comparisons.",
+            skills: ["Python", "Streamlit", "FAISS", "LangChain", "Gemini", "RAG", "RAGAS"],
+            results: "End-to-end pipeline from PDF ingestion to structured risk scoring across peer banks; sentence-transformer embeddings with per-bank FAISS indices",
+            github: "https://github.com/vybhav72954/quantscribe",
+            featured: true
+        },
+        {
+            id: "momentum-illusion",
+            category: "Behavioral Economics",
+            title: "The Momentum Illusion",
+            subtitle: "Evidence from Professional Esports (CS:GO)",
+            description: "Empirical decomposition of the 'hot hand' in CS:GO — a 26.1pp round-win swing is fully explained by the game's loss bonus economy, not psychology.",
+            skills: ["Python", "Logistic Regression", "Behaviour", "Econometrics", "Causal Inference", "Clustering"],
+            results: "Momentum OR 2.95 collapses to β=0.022 (p=0.764) post economic controls; pseudo-R² 0.059→0.157; AIC −222; all holdout tests pass",
+            github: "https://github.com/vybhav72954/CS_GO-Economics",
+            featured: true
+        },
+        {
+            id: "narrative-voice",
+            category: "NLP / Audio ML",
+            title: "Narrative Voice Processing & Classification",
+            subtitle: "Tone Classification for Interactive Storytelling",
+            description: "ML pipeline extracting 90-dim acoustic feature vectors, train 6 classifiers, with cosine-similarity retrieval and transcription via OpenAI Whisper.",
+            skills: ["Python", "SVM", "SHAP", "Whisper", "UMAP", "t-SNE"],
+            results: "SVM-RBF best: 0.745 F1-macro, 0.936 ROC-AUC on 216-sample holdout; 0.00 WER transcription; valence-arousal circumplex visualisation",
+            github: "https://github.com/vybhav72954/voice_mood_analysis",
+            featured: false
+        },
+        {
             id: "agentic-ai",
             category: "Applied AI",
             title: "Cuckoo.ai",
@@ -84,7 +117,7 @@ const CONFIG = {
             description: "RAG-powered agentic system for automated analysis of clinical and pharmaceutical documentation at scale.",
             skills: ["Python", "LangChain", "RAG", "Vector DBs"],
             results: "85% reduction in manual review time",
-            github: "https://github.com/CWTYGs/cuckoo.ai/tree/master    ",
+            github: "https://github.com/CWTYGs/cuckoo.ai/tree/master",
             featured: true
         },
         /*
@@ -129,7 +162,7 @@ const CONFIG = {
             category: "Emotion Detection",
             title: "Multi-modal Bio-Signal Classification",
             subtitle: "Emotion Detection using Machine Learning",
-            description: "Architected 3-phase affective computing pipeline correlating & dynamically map emotions to song mood using signal.",
+            description: "3-phase affective computing pipeline correlating & dynamically map emotions to song mood using signal.",
             skills: ["Python", "Regression", "Random Forest", "Ensemble"],
             results: " Engineered 6k+ audio features, achieving 81.4% accuracy in 37 classes",
             github: "https://github.com/vybhav72954/Music-Mood-Analysis",
@@ -153,9 +186,31 @@ const CONFIG = {
             subtitle: "Automatic Image Captioning - Flickr-8k Dataset.",
             description: "Using CNN models (Xception Model and Inception), created a pipeline for Image Captioning",
             skills: ["Deep Learning", "CNNs", "NLP", "LSTM", "Python"],
-            results: "Created merge-architecture model using LSTM to map 2048-dim image features to 34-len text sequences achieving BLEU-1 score of 0.528",
+            results: "LSTM to map 2048-dim image features to 34-len text sequences achieving BLEU-1 score of 0.528",
             github: "https://github.com/vybhav72954/Automated_Image_Captioning",
             featured: false
+        },
+                {
+            id: "kgout",
+            category: "Developer Tools",
+            title: "kgout",
+            subtitle: "Auto-sync Kaggle Outputs to Drive or Local via ngrok",
+            description: "Published PyPI package that automatically syncs Kaggle notebook outputs to Google Drive or a local machine via ngrok.",
+            skills: ["Python", "ngrok", "PyPI", "Google Drive API", "Kaggle API"],
+            results: "Published on PyPI; zero-friction output retrieval from Kaggle GPU",
+            github: "https://github.com/vybhav72954/kgout",
+            featured: false
+        },
+        {
+            id: "ml-momentum-strategy",
+            category: "Quantitative Finance",
+            title: "ML Long-Only Momentum Strategy",
+            subtitle: "Cross-Sectional Equity Selection — US Large-Cap",
+            description: "4-model ensemble with online adaptation predicting weekly cross-sectional outperformance across 10 US large-cap stocks.",
+            skills: ["Python", "XGBoost", "LightGBM", "Optuna", "Walk-Forward CV", "SHAP"],
+            results: "13 quarterly OOS folds; 43.3% zero-trade weeks; 0.1% round-trip transaction costs modelled",
+            github: "https://github.com/vybhav72954/CS_GO-Economics",
+            featured: true
         },
     ],
 
@@ -191,11 +246,18 @@ const CONFIG = {
 
     blogPosts: [
         {
-            title: "Beginner's Guide to Auto-Formatting",
-            platform: "DEV.to",
-            url: "https://dev.to/vybhav/beginners-guide-to-auto-formatting-1hpp",
-            thumbnail: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3kbz6e104auz9ighefkt.jpg",
-            date: "2021"
+            title: "I Built a Trading Strategy That Made 107% — I Was Losing Money the Entire Time",
+            platform: "medium",
+            url: "https://vybhav.medium.com/i-built-a-trading-strategy-that-made-107-i-was-losing-money-the-entire-time-be45e20596dd",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*rteemNSodgz4THVL1YkSjw.png",
+            date: "2026"
+        },
+        {
+            title: "Why PGDBA Might Be the Right Program for You (and Why It Isn't)",
+            platform: "medium",
+            url: "https://vybhav.medium.com/why-pgdba-might-be-the-right-program-for-you-and-why-it-isnt-5cdd9950ad5d",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lgntudR8UirbwEAJagvkCw.jpeg",
+            date: "2026"
         },
         {
             title: "First Steps in GirlScript Summer of Code '21",
@@ -205,10 +267,10 @@ const CONFIG = {
             date: "2021"
         },
         {
-            title: "Let's Talk About Sys",
+            title: "Beginner's Guide to Auto-Formatting",
             platform: "DEV.to",
-            url: "https://dev.to/vybhav/let-s-talk-about-sys-25mf",
-            thumbnail: "https://codebl0g.wordpress.com/wp-content/uploads/2019/07/python-software-logo-2.jpg",
+            url: "https://dev.to/vybhav/beginners-guide-to-auto-formatting-1hpp",
+            thumbnail: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3kbz6e104auz9ighefkt.jpg",
             date: "2021"
         },
         {
@@ -219,12 +281,12 @@ const CONFIG = {
             date: "2021"
         },
         {
-            title: "Why PGDBA Might Be the Right Program for You (and Why It Isn’t)",
-            platform: "medium",
-            url: "https://vybhav.medium.com/why-pgdba-might-be-the-right-program-for-you-and-why-it-isnt-5cdd9950ad5d",
-            thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lgntudR8UirbwEAJagvkCw.jpeg",
-            date: "2026"
-        }
+            title: "Let's Talk About Sys",
+            platform: "DEV.to",
+            url: "https://dev.to/vybhav/let-s-talk-about-sys-25mf",
+            thumbnail: "https://codebl0g.wordpress.com/wp-content/uploads/2019/07/python-software-logo-2.jpg",
+            date: "2021"
+        },
     ],
 
     experience: [
