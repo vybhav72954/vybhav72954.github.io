@@ -11,7 +11,7 @@ const CONFIG = {
     credentials: [
         "Data Science @ ISI Kolkata · IIT Kharagpur · IIM Calcutta",
         "Ex–ZS Associates",
-            "Computer Science Engineer @ Thapar University"
+        "Computer Science Engineer @ Thapar University"
     ],
 
     tagline: "Working at the intersection of statistical rigor, real-world data complexity, and production-aware ML systems.",
@@ -190,7 +190,7 @@ const CONFIG = {
             github: "https://github.com/vybhav72954/Automated_Image_Captioning",
             featured: false
         },
-                {
+        {
             id: "kgout",
             category: "Developer Tools",
             title: "kgout",
@@ -260,6 +260,13 @@ const CONFIG = {
             date: "2026"
         },
         {
+            title: "Your Most Significant Variable Might Be Your Most Useless",
+            platform: "medium",
+            url: "https://medium.com/@vybhav/your-most-significant-variable-might-be-your-most-useless-293048d7ff94",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*KuqwdZ7K_POJ5Ah0V8l0-w.png",
+            date: "2026"
+        },
+        {
             title: "First Steps in GirlScript Summer of Code '21",
             platform: "DEV.to",
             url: "https://dev.to/vybhav/first-steps-in-girlscript-summer-of-code-21-2353",
@@ -274,19 +281,21 @@ const CONFIG = {
             date: "2021"
         },
         {
-            title: "Welcome to my First Blog",
-            platform: "medium",
-            url: "https://medium.com/@vybhav/welcome-to-my-first-blog-208a97eac694",
-            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg",
-            date: "2021"
-        },
-        {
             title: "Let's Talk About Sys",
             platform: "DEV.to",
             url: "https://dev.to/vybhav/let-s-talk-about-sys-25mf",
             thumbnail: "https://codebl0g.wordpress.com/wp-content/uploads/2019/07/python-software-logo-2.jpg",
             date: "2021"
         },
+        /*
+        {
+            title: "Welcome to my First Blog",
+            platform: "medium",
+            url: "https://medium.com/@vybhav/welcome-to-my-first-blog-208a97eac694",
+            thumbnail: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*eHkB9Uv8XNrcalGyEHE_wA.jpeg",
+            date: "2021"
+        },
+        */
     ],
 
     experience: [
