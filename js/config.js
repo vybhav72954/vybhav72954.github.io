@@ -10,6 +10,7 @@ const CONFIG = {
 
     credentials: [
         "Data Science @ ISI Kolkata · IIT Kharagpur · IIM Calcutta",
+        "GSoC 2026 @ HumanAI",
         "Ex–ZS Associates",
         "Computer Science Engineer @ Thapar University"
     ],
@@ -47,7 +48,7 @@ const CONFIG = {
             "Insights over numbers"
         ],
         snapshot: {
-            achievement: "150+ Citations across Publications || Mentor - GirlScript Summer of Code'2021 || Winner - National Semester Long Project (SLoP) - DA-IICT || Runner up - Script Winter of Code",
+            achievement: "GSoC 2026 Contributor - HumanAI || 200+ Citations across Publications || Mentor - GirlScript Summer of Code'2021 || Winner - National Semester Long Project (SLoP) - DA-IICT || Runner up - Script Winter of Code",
             experience: "3.5+ years Applied Analytics / ML",
             interests: "Healthcare · Computational Psychiatry · Human Computer Interfacing"
         }
@@ -301,6 +302,15 @@ const CONFIG = {
     experience: [
         {
             side: "left",
+            title: "GSoC 2026 Contributor",
+            org: "Google Summer of Code · HumanAI",
+            period: "May 2026 — Present",
+            points: [
+                "Project: TableTalk — AI-driven system for narrative voice classification and retrieval in interactive storytelling systems"
+            ]
+        },
+        {
+            side: "right",
             title: "Graduate Student — PGDBA",
             org: "ISI Kolkata · IIT Kharagpur · IIM Calcutta",
             period: "2024 — Present",
@@ -310,7 +320,7 @@ const CONFIG = {
             ]
         },
         {
-            side: "right",
+            side: "left",
             title: "Associate -> Associate Consultant",
             org: "ZS Associates",
             period: "Jan 2022 — Aug 2024",
@@ -321,7 +331,7 @@ const CONFIG = {
             ]
         },
         {
-            side: "left",
+            side: "right",
             title: "ML Fellow",
             org: "Fellowship.ai - Launchpad",
             period: "Apr 2022 — Jun 2022",
@@ -331,7 +341,7 @@ const CONFIG = {
             ]
         },
         {
-            side: "right",
+            side: "left",
             title: "B.E. & MBA",
             org: "Thapar Institute of Engineering and Technology",
             period: "Apr 2017 — Jul 2022",
